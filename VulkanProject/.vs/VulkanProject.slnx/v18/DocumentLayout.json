@@ -3,7 +3,8 @@
   "WorkspaceRootPath": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanTriangleTest\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -23,13 +24,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanTriangleTest\\main.cpp",
-              "RelativeDocumentMoniker": "..\\..\\VulkanTriangleTest\\main.cpp",
-              "ToolTip": "C:\\USC\\CSCI580\\VulkanTriangleTest\\main.cpp",
-              "RelativeToolTip": "..\\..\\VulkanTriangleTest\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\main.cpp",
+              "RelativeDocumentMoniker": "VulkanProject\\main.cpp",
+              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\main.cpp",
+              "RelativeToolTip": "VulkanProject\\main.cpp",
+              "ViewState": "AgIAAEUEAAAAAAAAAAAmwGsEAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-11T21:43:25.16Z",
+              "WhenOpened": "2025-11-11T21:53:04.849Z",
               "EditorCaption": ""
             },
             {
@@ -40,7 +41,7 @@
               "RelativeDocumentMoniker": "VulkanProject\\test.cpp",
               "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\test.cpp",
               "RelativeToolTip": "VulkanProject\\test.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-11T21:34:32.955Z",
               "EditorCaption": ""
