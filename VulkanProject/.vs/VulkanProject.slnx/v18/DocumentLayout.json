@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VulkanProject\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VulkanProject\\shaders\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -18,33 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "shader.frag",
+              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.frag",
+              "RelativeDocumentMoniker": "VulkanProject\\shaders\\shader.frag",
+              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.frag",
+              "RelativeToolTip": "VulkanProject\\shaders\\shader.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-11T23:49:44.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "shader.vert",
+              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.vert",
+              "RelativeDocumentMoniker": "VulkanProject\\shaders\\shader.vert",
+              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.vert",
+              "RelativeToolTip": "VulkanProject\\shaders\\shader.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-11T23:48:40.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\main.cpp",
               "RelativeDocumentMoniker": "VulkanProject\\main.cpp",
               "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\main.cpp",
               "RelativeToolTip": "VulkanProject\\main.cpp",
-              "ViewState": "AgIAAEUEAAAAAAAAAAAmwGsEAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-11T21:53:04.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "test.cpp",
               "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\test.cpp",
               "RelativeDocumentMoniker": "VulkanProject\\test.cpp",
               "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\test.cpp",
               "RelativeToolTip": "VulkanProject\\test.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-11T21:34:32.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T21:34:32.955Z"
             }
           ]
         }
