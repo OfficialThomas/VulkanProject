@@ -15,11 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="vulkandriver.h">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vulkandriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dependencies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
