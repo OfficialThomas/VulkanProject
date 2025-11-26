@@ -1,7 +1,2 @@
 ﻿  main.cpp
-C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(222,35): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
-C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(222,35): warning C4267:         with
-C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(222,35): warning C4267:         [
-C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(222,35): warning C4267:             _Ty=unsigned int
-C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(222,35): warning C4267:         ]
   VulkanProject.vcxproj -> C:\USC\CSCI580\VulkanProject\VulkanProject\x64\Debug\VulkanProject.exe
