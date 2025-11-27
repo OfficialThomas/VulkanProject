@@ -209,7 +209,7 @@ d 1
 illum 2
 Ka 0 0 0
 Ks 0 0 0
-map_Kd D:\Dropbox (Personal)\GD_CharlesStuff\charles\Projects\LWGStarWars\x wing\T-65BXWing\Textures\Fuselage_CockpitColor.tga
+map_Kd Textures\Fuselage_CockpitColor.tga
 newmtl xwingEngines
 Kd 0.48 0.48 0.48
 Ns 8
@@ -217,7 +217,7 @@ d 1
 illum 2
 Ka 0 0 0
 Ks 0.05 0.05 0.05
-map_Kd D:\Dropbox (Personal)\GD_CharlesStuff\charles\Projects\LWGStarWars\x wing\T-65BXWing\Textures\Engines_WingsColor.tga
+map_Kd Textures\Engines_WingsColor.tga
 newmtl xwingFuselage
 Kd 0.599216 0.599216 0.599216
 Ns 8
@@ -225,7 +225,7 @@ d 1
 illum 2
 Ka 0 0 0
 Ks 0.05 0.05 0.05
-map_Kd D:\Dropbox (Personal)\GD_CharlesStuff\charles\Projects\LWGStarWars\x wing\T-65BXWing\Textures\Fuselage_CockpitColor.tga
+map_Kd Textures\Fuselage_CockpitColor.tga
 newmtl xwingNose
 Kd 0.8 0.8 0.8
 Ns 256
@@ -240,7 +240,7 @@ d 1
 illum 2
 Ka 0 0 0
 Ks 0.1 0.1 0.1
-map_Kd D:\Dropbox (Personal)\GD_CharlesStuff\charles\Projects\LWGStarWars\x wing\T-65BXWing\Textures\Fuselage_CockpitColor.tga
+map_Kd Textures\Fuselage_CockpitColor.tga
 newmtl xwingSFoils
 Kd 0.599216 0.599216 0.599216
 Ns 8
@@ -248,4 +248,4 @@ d 1
 illum 2
 Ka 0 0 0
 Ks 0.05 0.05 0.05
-map_Kd D:\Dropbox (Personal)\GD_CharlesStuff\charles\Projects\LWGStarWars\x wing\T-65BXWing\Textures\Engines_WingsColor.tga
+map_Kd Textures\Engines_WingsColor.tga
