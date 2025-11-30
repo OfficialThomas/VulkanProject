@@ -7,36 +7,20 @@
       "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\vulkandriver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\vulkandriver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.obj||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\models\\XWing_Woody.obj||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.mtl||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\models\\XWing_Woody.mtl||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.obj||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\models\\XWing_Woody.obj||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VulkanProject\\shaders\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VulkanProject\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\vulkandriver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\vulkandriver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\objects.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\objects.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\dependencies.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\dependencies.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C205A149-7355-4224-923C-29410709B33D}|VulkanProject\\VulkanProject.vcxproj|solutionrelative:VulkanProject\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,8 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "XWing_Woody.obj",
+              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.obj",
+              "RelativeDocumentMoniker": "VulkanProject\\models\\XWing_Woody.obj",
+              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.obj",
+              "RelativeToolTip": "VulkanProject\\models\\XWing_Woody.obj",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQBSURBVEhLpVVbLNxpFD8zU6FxCcKiWYvlxXoQEimJjei6BAmGSESpS12SsVIhq4iJepq4ZCNUVkRoRJqYsk\u002B88LCykXgQYtYl6jrUNjtiZrFu29Znz/k7akZXM6lf8s3/\u002B5/vfy7fOb9zBj4HlUoVe3R0ZDg8PNyvr69PY7H1OD8/592nKCgoeICGlxcXF8Xc3JxAR/ry8vJkPr4d1Gq1Eo2/IcMlJSUiLy9PTE1NCZT92dLS8pA/\u002BzIUFRX9gIbeIgTuRXR0tLTIydraGt3EWFtbq5TJZKzxeSj4KYGMt7a2/qLX679pbGyE1dVVPgHY39\u002BH\u002Bfl5CAgIuJuSknL/9PRUPzk5\u002BZqPITc39/vj4\u002BN3JpPpkEWW4LS8RSNSWi4jv746OzvpFrResSr09/eXou729PT0C1tb2zssliCnHypodXV128HBgWdbWxssLy9Lh\u002BaQy\u002BWADiAnJ4fIoYuMjFS7u7t/1d7eXqJUKptOTk7u4e0eGY3Gl05OTndZDWRExaampo6NjY0AMm6elksoFAqIiYmhQMDe3p6lV0AyQG9vL4SHh0N6ejosLS31ZWVlPUVbBhledWdzc9MNcw8rKyusYgkqqJeXFzg6OrLEEgaDAfb29sDOzg5SU1MhOzv7XzSuDQ4OziUHB\u002Bvr6w5IP9ja2mKVC1DkLi4u0hO/A8wzeHh48OlF4bHY/HaF4uJiSE5OplS\u002BUNjY2LxOSkq67\u002B/v70y5JyUC5Tw2NhaQkpCRkQFCCNDpdDAwMADIIvD19ZVqRZGbw8fHBxISEsDNzW2zubn5ubyhoeHXurq6J4GBgX/hE/z8/KQPo6KiID8/HxwcHH6XBNcwMzMDSGd\u002BuwDpkg229YRs8xEApigLU2CanZ29pOIHTNlvQUFBX\u002BNeYBElmtL\u002Bcmk0GhEXFyfJqRFJl2yQLTZriZqaGiUqbpAyFm4cFb8jOb3/nwP8RmAaRGFhocAeEP8g0MbNQ5HYUlFRkYJRaL29vV1ZfKMDWru7u4LGCu1R7/3CwsLPrGY9SPkmB7SQhaKqqkoMDw/TLcTo6KjG1dVVahiLtrYGXV1dvLsCNRo2qtSkZ2dn1JSq7u7uD2lpaWqrRiJFqdVqoa\u002BvjyU3A2kPOMsgPj7\u002B3c7OTqfVDnj7EZh3wDkkRW8OZ2dn\u002BieEiIiIv8fHxzVWOcBR/Ji30NHRoUIyhNDsGRoaYukFPD09obS0FEJCQkw9PT3PysrKnvOR9QgNDfXDG/2BHSwqKyulwtPCiSomJiaISQIdV\u002BB4kSb1FyEzMzMC86vb3t4WyHuBo0SMjY0Ro3YHBwcr\u002BbPbITExMRijnSaK4tigyI1Ykx9vFfl1hIWFfYtRL\u002BBf5fnIyMhPLDYDwH\u002B2no8FQKKllQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-11-30T02:59:14.086Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -56,85 +52,33 @@
               "RelativeDocumentMoniker": "VulkanProject\\models\\XWing_Woody.mtl",
               "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.mtl",
               "RelativeToolTip": "VulkanProject\\models\\XWing_Woody.mtl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-27T00:48:31.981Z",
+              "WhenOpened": "2025-11-30T01:48:29.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "XWing_Woody.obj",
-              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.obj",
-              "RelativeDocumentMoniker": "VulkanProject\\models\\XWing_Woody.obj",
-              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\models\\XWing_Woody.obj",
-              "RelativeToolTip": "VulkanProject\\models\\XWing_Woody.obj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIrbHAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQBSURBVEhLpVVbLNxpFD8zU6FxCcKiWYvlxXoQEimJjei6BAmGSESpS12SsVIhq4iJepq4ZCNUVkRoRJqYsk\u002B88LCykXgQYtYl6jrUNjtiZrFu29Znz/k7akZXM6lf8s3/\u002B5/vfy7fOb9zBj4HlUoVe3R0ZDg8PNyvr69PY7H1OD8/592nKCgoeICGlxcXF8Xc3JxAR/ry8vJkPr4d1Gq1Eo2/IcMlJSUiLy9PTE1NCZT92dLS8pA/\u002BzIUFRX9gIbeIgTuRXR0tLTIydraGt3EWFtbq5TJZKzxeSj4KYGMt7a2/qLX679pbGyE1dVVPgHY39\u002BH\u002Bfl5CAgIuJuSknL/9PRUPzk5\u002BZqPITc39/vj4\u002BN3JpPpkEWW4LS8RSNSWi4jv746OzvpFrResSr09/eXou729PT0C1tb2zssliCnHypodXV128HBgWdbWxssLy9Lh\u002BaQy\u002BWADiAnJ4fIoYuMjFS7u7t/1d7eXqJUKptOTk7u4e0eGY3Gl05OTndZDWRExaampo6NjY0AMm6elksoFAqIiYmhQMDe3p6lV0AyQG9vL4SHh0N6ejosLS31ZWVlPUVbBhledWdzc9MNcw8rKyusYgkqqJeXFzg6OrLEEgaDAfb29sDOzg5SU1MhOzv7XzSuDQ4OziUHB\u002Bvr6w5IP9ja2mKVC1DkLi4u0hO/A8wzeHh48OlF4bHY/HaF4uJiSE5OplS\u002BUNjY2LxOSkq67\u002B/v70y5JyUC5Tw2NhaQkpCRkQFCCNDpdDAwMADIIvD19ZVqRZGbw8fHBxISEsDNzW2zubn5ubyhoeHXurq6J4GBgX/hE/z8/KQPo6KiID8/HxwcHH6XBNcwMzMDSGd\u002BuwDpkg229YRs8xEApigLU2CanZ29pOIHTNlvQUFBX\u002BNeYBElmtL\u002Bcmk0GhEXFyfJqRFJl2yQLTZriZqaGiUqbpAyFm4cFb8jOb3/nwP8RmAaRGFhocAeEP8g0MbNQ5HYUlFRkYJRaL29vV1ZfKMDWru7u4LGCu1R7/3CwsLPrGY9SPkmB7SQhaKqqkoMDw/TLcTo6KjG1dVVahiLtrYGXV1dvLsCNRo2qtSkZ2dn1JSq7u7uD2lpaWqrRiJFqdVqoa\u002BvjyU3A2kPOMsgPj7\u002B3c7OTqfVDnj7EZh3wDkkRW8OZ2dn\u002BieEiIiIv8fHxzVWOcBR/Ji30NHRoUIyhNDsGRoaYukFPD09obS0FEJCQkw9PT3PysrKnvOR9QgNDfXDG/2BHSwqKyulwtPCiSomJiaISQIdV\u002BB4kSb1FyEzMzMC86vb3t4WyHuBo0SMjY0Ro3YHBwcr\u002BbPbITExMRijnSaK4tigyI1Ykx9vFfl1hIWFfYtRL\u002BBf5fnIyMhPLDYDwH\u002B2no8FQKKllQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-11-27T00:44:14.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "vulkandriver.cpp",
-              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\vulkandriver.cpp",
-              "RelativeDocumentMoniker": "VulkanProject\\vulkandriver.cpp",
-              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\vulkandriver.cpp",
-              "RelativeToolTip": "VulkanProject\\vulkandriver.cpp",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAANQHAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T05:10:42.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "objects.h",
-              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\objects.h",
-              "RelativeDocumentMoniker": "VulkanProject\\objects.h",
-              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\objects.h",
-              "RelativeToolTip": "VulkanProject\\objects.h",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAuwGAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T05:01:42.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "dependencies.h",
-              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\dependencies.h",
-              "RelativeDocumentMoniker": "VulkanProject\\dependencies.h",
-              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\dependencies.h",
-              "RelativeToolTip": "VulkanProject\\dependencies.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T04:59:37.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "shader.frag",
               "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.frag",
               "RelativeDocumentMoniker": "VulkanProject\\shaders\\shader.frag",
               "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.frag",
               "RelativeToolTip": "VulkanProject\\shaders\\shader.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-11-11T23:49:44.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "shader.vert",
               "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.vert",
               "RelativeDocumentMoniker": "VulkanProject\\shaders\\shader.vert",
               "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\shaders\\shader.vert",
               "RelativeToolTip": "VulkanProject\\shaders\\shader.vert",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-11-11T23:48:40.656Z",
               "EditorCaption": ""
@@ -147,22 +91,9 @@
               "RelativeDocumentMoniker": "VulkanProject\\main.cpp",
               "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\main.cpp",
               "RelativeToolTip": "VulkanProject\\main.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAHQLAAAAAAAAAAAAwAEFAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-11T21:53:04.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "vulkandriver.h",
-              "DocumentMoniker": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\vulkandriver.h",
-              "RelativeDocumentMoniker": "VulkanProject\\vulkandriver.h",
-              "ToolTip": "C:\\USC\\CSCI580\\VulkanProject\\VulkanProject\\VulkanProject\\vulkandriver.h",
-              "RelativeToolTip": "VulkanProject\\vulkandriver.h",
-              "ViewState": "AgIAADIAAAAAAAAAAAAuwFgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-11T21:34:32.955Z",
               "EditorCaption": ""
             }
           ]
