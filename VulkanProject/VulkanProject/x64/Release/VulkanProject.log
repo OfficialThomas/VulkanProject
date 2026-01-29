@@ -1,8 +1,11 @@
 ﻿  main.cpp
+C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(622,35): warning C4101: 'e': unreferenced local variable
+C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(628,36): warning C4101: 'e2': unreferenced local variable
+C:\USC\CSCI580\VulkanProject\VulkanProject\VulkanProject\main.cpp(644,35): warning C4101: 'e': unreferenced local variable
 x64\Release\vulkandriver.obj : warning LNK4042: object specified more than once; extras ignored
   Generating code
-  2 of 3703 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  4 of 3700 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    12 functions had inline decision re-evaluated but remain unchanged
+    26 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   VulkanProject.vcxproj -> C:\USC\CSCI580\VulkanProject\VulkanProject\x64\Release\VulkanProject.exe

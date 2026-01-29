@@ -130,7 +130,7 @@ namespace std {
 			return ((hash<glm::vec3>()(vertex.pos) ^
 				(hash<glm::vec3>()(vertex.normal) << 1)) >> 1) ^
 				(hash<glm::vec2>()(vertex.texCoord) << 1) ^
-				(hash<uint32_t>()(vertex.textureId) << 1);  // new for multiple textures
+				(hash<uint32_t>()(vertex.textureId) << 1);
 		}
 	};
 }
@@ -253,8 +253,7 @@ private:
 	VkSampleCountFlagBits msaaSamples = VK_SAMPLE_COUNT_1_BIT;
 
 	void initVulkan() {
-		// Debug file structure first
-		debugFileStructure();
+		//debugFileStructure();
 		
 		createInstance();
 		setupDebugMessenger();
@@ -293,10 +292,10 @@ private:
 			return;
 		}
 
-		std::cout << "\n=== DRAW COMMAND ORGANIZATION ===" << std::endl;
-		std::cout << "Organizing " << indices.size() << " indices into draw commands..." << std::endl;
-		std::cout << "Total vertices: " << vertices.size() << std::endl;
-		std::cout << "Available textures: " << textureImages.size() << std::endl;
+		//std::cout << "\n=== DRAW COMMAND ORGANIZATION ===" << std::endl;
+		//std::cout << "Organizing " << indices.size() << " indices into draw commands..." << std::endl;
+		//std::cout << "Total vertices: " << vertices.size() << std::endl;
+		//std::cout << "Available textures: " << textureImages.size() << std::endl;
 
 		// Analyze texture distribution first
 		std::map<uint32_t, uint32_t> textureUsageCount;
@@ -307,18 +306,13 @@ private:
 			}
 		}
 
-		std::cout << "\nTexture usage distribution:" << std::endl;
-		for (const auto& pair : textureUsageCount) {
-			std::cout << "  Texture " << pair.first << ": " << pair.second << " index references" << std::endl;
-		}
-
 		// Group consecutive triangles by texture
 		uint32_t currentTexture = vertices[indices[0]].textureId;
 		uint32_t startIndex = 0;
 		uint32_t totalIndicesProcessed = 0;
 
-		std::cout << "\nGenerating draw commands:" << std::endl;
-		std::cout << "Starting with texture " << currentTexture << std::endl;
+		//std::cout << "\nGenerating draw commands:" << std::endl;
+		//std::cout << "Starting with texture " << currentTexture << std::endl;
 
 		for (uint32_t i = 3; i <= indices.size(); i += 3) {  // Step by triangles (3 indices)
 			bool newGroup = false;
@@ -337,65 +331,14 @@ private:
 				cmd.textureIndex = currentTexture;
 				drawCommands.push_back(cmd);
 
-				std::cout << "Draw command " << (drawCommands.size() - 1) 
-						  << ": indices " << startIndex << "-" << (startIndex + cmd.indexCount - 1) 
-						  << " (count: " << cmd.indexCount << ", triangles: " << cmd.indexCount / 3 
-						  << ") using texture " << cmd.textureIndex << std::endl;
-
 				totalIndicesProcessed += cmd.indexCount;
 
 				if (i < indices.size()) {
 					currentTexture = vertices[indices[i]].textureId;
 					startIndex = i;
-					std::cout << "  Next group starts at index " << i << " with texture " << currentTexture << std::endl;
 				}
 			}
 		}
-
-		std::cout << "\nDraw command summary:" << std::endl;
-		std::cout << "Created " << drawCommands.size() << " draw commands" << std::endl;
-		std::cout << "Total indices in commands: " << totalIndicesProcessed << " / " << indices.size() << std::endl;
-		
-		// Validate draw commands
-		bool hasErrors = false;
-		for (size_t i = 0; i < drawCommands.size(); i++) {
-			const auto& cmd = drawCommands[i];
-			
-			// Check texture index bounds
-			if (cmd.textureIndex >= textureImages.size()) {
-				std::cout << "ERROR: Draw command " << i << " references texture " << cmd.textureIndex 
-						  << " but only have " << textureImages.size() << " textures!" << std::endl;
-				hasErrors = true;
-			}
-			
-			// Check index bounds
-			if (cmd.firstIndex + cmd.indexCount > indices.size()) {
-				std::cout << "ERROR: Draw command " << i << " accesses indices beyond bounds: " 
-						  << cmd.firstIndex << "+" << cmd.indexCount << " > " << indices.size() << std::endl;
-				hasErrors = true;
-			}
-			
-			// Check if triangle count is valid
-			if (cmd.indexCount % 3 != 0) {
-				std::cout << "WARNING: Draw command " << i << " has " << cmd.indexCount 
-						  << " indices (not divisible by 3)" << std::endl;
-			}
-		}
-		
-		if (totalIndicesProcessed != indices.size()) {
-			std::cout << "ERROR: Draw commands cover " << totalIndicesProcessed 
-					  << " indices but total is " << indices.size() << " (missing " 
-					  << (indices.size() - totalIndicesProcessed) << " indices)" << std::endl;
-			hasErrors = true;
-		}
-
-		if (hasErrors) {
-			std::cout << "CRITICAL: Draw command organization has errors - some faces may not render!" << std::endl;
-		} else {
-			std::cout << "SUCCESS: Draw command organization validated successfully" << std::endl;
-		}
-		
-		std::cout << "==================================\n" << std::endl;
 	}
 
 	void createColorResources() {
@@ -557,7 +500,7 @@ private:
 			VK_FORMAT_R8G8B8A8_SRGB,
 			VK_IMAGE_ASPECT_COLOR_BIT);
 
-		std::cout << "Created default white texture at index 0" << std::endl;
+		//std::cout << "Created default white texture at index 0" << std::endl;
 	}
 
 	void createColoredTexture(float r, float g, float b, uint32_t textureIndex) {
@@ -613,10 +556,11 @@ private:
 			VK_FORMAT_R8G8B8A8_SRGB,
 			VK_IMAGE_ASPECT_COLOR_BIT);
 
-		std::cout << "Created colored texture at index " << textureIndex 
-			<< " with color RGB(" << static_cast<int>(colorPixel[0]) << "," 
-			<< static_cast<int>(colorPixel[1]) << "," 
-			<< static_cast<int>(colorPixel[2]) << ")" << std::endl;
+		// DEBUG FOR COLORED TEXTURE CREATION
+		//std::cout << "Created colored texture at index " << textureIndex 
+		//	<< " with color RGB(" << static_cast<int>(colorPixel[0]) << "," 
+		//	<< static_cast<int>(colorPixel[1]) << "," 
+		//	<< static_cast<int>(colorPixel[2]) << ")" << std::endl;
 	}
 
 	void loadModel() {
@@ -632,14 +576,17 @@ private:
 			modelDir = MODEL_PATH.substr(0, lastSlash + 1);
 		}
 		
-		std::cout << "Loading model from: " << MODEL_PATH << std::endl;
-		std::cout << "Model directory: " << modelDir << std::endl;
+		// DEBUG FOR MODEL LOADING
+		//std::cout << "Loading model from: " << MODEL_PATH << std::endl;
+		//std::cout << "Model directory: " << modelDir << std::endl;
 
 		// Load with material directory specified
 		if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, MODEL_PATH.c_str(), modelDir.c_str())) {
 			throw std::runtime_error(warn + err);
 		}
 		
+
+		// this will always trigger - XWing has some bad geometry - maybe your obj doesnt?
 		if (!warn.empty()) {
 			std::cout << "Warning: " << warn << std::endl;
 		}
@@ -651,47 +598,42 @@ private:
 		std::map<std::string, uint32_t> textureMap;
 		uint32_t nextTextureId = 1;  // Start at 1 instead of 0 (0 is default white)
 
-		std::cout << "Found " << materials.size() << " materials:" << std::endl;
 		for (size_t i = 0; i < materials.size(); i++) {
 			const auto& material = materials[i];
-			std::cout << "  Material " << i << ": " << material.name << std::endl;
-			std::cout << "    Color: R=" << material.diffuse[0] << " G=" << material.diffuse[1] << " B=" << material.diffuse[2] << std::endl;
+
+			// DEBUG FOR MATERIAL PROPERTIES
+			//std::cout << "  Material " << i << ": " << material.name << std::endl;
+			//std::cout << "    Color: R=" << material.diffuse[0] << " G=" << material.diffuse[1] << " B=" << material.diffuse[2] << std::endl;
 			
 			if (!material.diffuse_texname.empty()) {
-				std::cout << "    Original texture path: " << material.diffuse_texname << std::endl;
+				// DEBUG FOR TEXTURE NAMES
+				//std::cout << "    Original texture path: " << material.diffuse_texname << std::endl;
 				
 				// Check if we've already processed this texture
 				if (textureMap.find(material.diffuse_texname) == textureMap.end()) {
 					// Find the correct texture path
 					std::string texturePath = findTexturePath(material.diffuse_texname);
-					std::cout << "    Resolved texture path: " << texturePath << std::endl;
+					//std::cout << "    Resolved texture path: " << texturePath << std::endl;
 
 					try {
 						createTextureImage(texturePath, nextTextureId);
 						textureMap[material.diffuse_texname] = nextTextureId;
 						nextTextureId++;
-						std::cout << "    Successfully loaded texture at index " << (nextTextureId-1) << std::endl;
+						//std::cout << "    Successfully loaded texture at index " << (nextTextureId-1) << std::endl;
 					}
 					catch (const std::exception& e) {
-						std::cout << "    Failed to load texture: " << e.what() << std::endl;
-						
-						// Create a colored texture based on material diffuse color
-						std::cout << "    Creating colored texture based on material color" << std::endl;
 						try {
 							createColoredTexture(material.diffuse[0], material.diffuse[1], material.diffuse[2], nextTextureId);
 							textureMap[material.diffuse_texname] = nextTextureId;
 							nextTextureId++;
-							std::cout << "    Successfully created colored texture at index " << (nextTextureId-1) << std::endl;
 						}
 						catch (const std::exception& e2) {
-							std::cout << "    Failed to create colored texture: " << e2.what() << std::endl;
-							std::cout << "    Using default white texture" << std::endl;
 							textureMap[material.diffuse_texname] = 0;  // Use default white texture
 						}
 					}
 				}
 			} else {
-				std::cout << "    No texture specified - creating colored texture based on material" << std::endl;
+				//std::cout << "    No texture specified - creating colored texture based on material" << std::endl;
 				// Create a unique texture for this material based on its color
 				std::string materialKey = "material_" + std::to_string(i);
 				if (textureMap.find(materialKey) == textureMap.end()) {
@@ -699,36 +641,27 @@ private:
 						createColoredTexture(material.diffuse[0], material.diffuse[1], material.diffuse[2], nextTextureId);
 						textureMap[materialKey] = nextTextureId;
 						nextTextureId++;
-						std::cout << "    Created colored texture at index " << (nextTextureId-1) << std::endl;
+						//std::cout << "    Created colored texture at index " << (nextTextureId-1) << std::endl;
 					}
 					catch (const std::exception& e) {
-						std::cout << "    Failed to create colored texture: " << e.what() << std::endl;
+						//std::cout << "    Failed to create colored texture: " << e.what() << std::endl;
 						textureMap[materialKey] = 0;  // Use default white texture
 					}
 				}
 			}
 		}
 
-		std::cout << "Created " << (nextTextureId-1) << " textures total" << std::endl;
-
 		// Count total faces first
 		size_t totalFaces = 0;
 		for (const auto& shape : shapes) {
 			totalFaces += shape.mesh.num_face_vertices.size();
-		}
-		
-		std::cout << "Processing " << totalFaces << " faces..." << std::endl;
-		
-		// Safety check for very large models
-		if (totalFaces > 100000) {
-			std::cout << "WARNING: Large model detected (" << totalFaces << " faces). This may take a while..." << std::endl;
 		}
 
 		// Now load vertices with texture IDs
 		std::unordered_map<Vertex, uint32_t> uniqueVertices{};
 		
 		size_t processedFaces = 0;
-		size_t progressInterval = std::max(totalFaces / 100, (size_t)1000); // Print progress every 1% or 1000 faces
+		//size_t progressInterval = std::max(totalFaces / 100, (size_t)1000); // Print progress every 1% or 1000 faces
 
 		for (const auto& shape : shapes) {
 			size_t index_offset = 0;
@@ -748,30 +681,21 @@ private:
 					
 					// Only print detailed debug info for first few faces
 					if (processedFaces < 10) {
-						std::cout << "Face " << processedFaces << " uses material " << materialId << " (" << material.name << ")" << std::endl;
+						//std::cout << "Face " << processedFaces << " uses material " << materialId << " (" << material.name << ")" << std::endl;
 					}
 					
 					if (!material.diffuse_texname.empty() && textureMap.count(material.diffuse_texname)) {
 						textureId = textureMap[material.diffuse_texname];
-						if (processedFaces < 10) {
-							std::cout << "  Using texture " << textureId << " for material texture: " << material.diffuse_texname << std::endl;
-						}
 					} else {
 						// Use material-based texture
 						std::string materialKey = "material_" + std::to_string(materialId);
 						if (textureMap.count(materialKey)) {
 							textureId = textureMap[materialKey];
-							if (processedFaces < 10) {
-								std::cout << "  Using texture " << textureId << " for material color" << std::endl;
-							}
 						}
-					}
-				} else {
-					if (processedFaces < 10) {
-						std::cout << "Face " << processedFaces << " has invalid/missing material ID: " << materialId << std::endl;
 					}
 				}
 
+				// Some of the XWing model has quads so we need to handle them
 				// Handle both triangles and quads by triangulating
 				if (fv == 3) {
 					// Triangle - process normally
@@ -907,85 +831,13 @@ private:
 				index_offset += fv;
 				processedFaces++;
 				
-				// Print progress periodically
-				if (processedFaces % progressInterval == 0) {
-					float progress = (float)processedFaces / totalFaces * 100.0f;
-					std::cout << "Progress: " << std::fixed << std::setprecision(1) << progress << "% (" << processedFaces << "/" << totalFaces << " faces)" << std::endl;
-				}
+				// DEBUG FOR PROGRESS TRACKING - I reccomend to uncomment this if the processing seems slow
+				//// Print progress periodically
+				//if (processedFaces % progressInterval == 0) {
+				//	float progress = (float)processedFaces / totalFaces * 100.0f;
+				//	std::cout << "Progress: " << std::fixed << std::setprecision(1) << progress << "% (" << processedFaces << "/" << totalFaces << " faces)" << std::endl;
+				//}
 			}
-		}
-
-		std::cout << "Loaded " << vertices.size() << " unique vertices and " << indices.size() << " indices" << std::endl;
-		
-		// Debug: Check for vertices with missing normals and texture coordinates
-		uint32_t verticesWithDefaultNormals = 0;
-		uint32_t verticesWithDefaultTexCoords = 0;
-		uint32_t verticesWithInvalidTextureIds = 0;
-		std::map<uint32_t, uint32_t> textureIdCounts;
-		
-		for (const auto& vertex : vertices) {
-			// Check for default normals (what we assign when normals are missing)
-			if (vertex.normal.x == 0.0f && vertex.normal.y == 0.0f && vertex.normal.z == 1.0f) {
-				verticesWithDefaultNormals++;
-			}
-			
-			// Check for default texture coordinates
-			if (vertex.texCoord.x == 0.0f && vertex.texCoord.y == 0.0f) {
-				verticesWithDefaultTexCoords++;
-			}
-			
-			// Check for invalid texture IDs
-			if (vertex.textureId >= textureImages.size()) {
-				verticesWithInvalidTextureIds++;
-			}
-			
-			textureIdCounts[vertex.textureId]++;
-		}
-		
-		std::cout << "\nVertex validation results:" << std::endl;
-		std::cout << "  Vertices with default normals: " << verticesWithDefaultNormals << " / " << vertices.size() 
-		          << " (" << (float)verticesWithDefaultNormals / vertices.size() * 100.0f << "%)" << std::endl;
-		std::cout << "  Vertices with default tex coords: " << verticesWithDefaultTexCoords << " / " << vertices.size() 
-		          << " (" << (float)verticesWithDefaultTexCoords / vertices.size() * 100.0f << "%)" << std::endl;
-		std::cout << "  Vertices with invalid texture IDs: " << verticesWithInvalidTextureIds << " / " << vertices.size() << std::endl;
-		
-		if (verticesWithInvalidTextureIds > 0) {
-			std::cout << "  WARNING: Some vertices reference non-existent textures!" << std::endl;
-		}
-		
-		std::cout << "\nTexture ID distribution in vertices:" << std::endl;
-		for (const auto& pair : textureIdCounts) {
-			std::cout << "    Texture " << pair.first << ": " << pair.second << " vertices";
-			if (pair.first >= textureImages.size()) {
-				std::cout << " (INVALID - texture doesn't exist!)";
-			}
-			std::cout << std::endl;
-		}
-		
-		// Safety check for memory usage
-		size_t estimatedMemoryMB = (vertices.size() * sizeof(Vertex) + indices.size() * sizeof(uint32_t)) / (1024 * 1024);
-		std::cout << "\nMemory usage: " << estimatedMemoryMB << " MB" << std::endl;
-		
-		if (estimatedMemoryMB > 500) {
-			std::cout << "WARNING: High memory usage detected. Consider using a simpler model for testing." << std::endl;
-		}
-		
-		// Debug: Check for degenerate triangles
-		uint32_t degenerateTriangles = 0;
-		for (size_t i = 0; i < indices.size(); i += 3) {
-			if (i + 2 < indices.size()) {
-				uint32_t v1 = indices[i];
-				uint32_t v2 = indices[i + 1]; 
-				uint32_t v3 = indices[i + 2];
-				
-				if (v1 == v2 || v1 == v3 || v2 == v3) {
-					degenerateTriangles++;
-				}
-			}
-		}
-
-		if (degenerateTriangles > 0) {
-			std::cout << "WARNING: Found " << degenerateTriangles << " degenerate triangles!" << std::endl;
 		}
 	}
 
@@ -1088,7 +940,7 @@ private:
 	}
 
 	void createTextureImage(const std::string& texturePath, uint32_t textureIndex) {
-		std::cout << "Attempting to load texture from: " << texturePath << std::endl;
+		//std::cout << "Attempting to load texture from: " << texturePath << std::endl;
 		
 		// Check if file exists first
 		if (!fileExists(texturePath)) {
@@ -1106,7 +958,7 @@ private:
 			throw std::runtime_error(error);
 		}
 
-		std::cout << "Successfully loaded texture: " << texturePath << " (" << texWidth << "x" << texHeight << ", " << texChannels << " channels)" << std::endl;
+		//std::cout << "Successfully loaded texture: " << texturePath << " (" << texWidth << "x" << texHeight << ", " << texChannels << " channels)" << std::endl;
 
 		VkDeviceSize imageSize = texWidth * texHeight * 4;
 
@@ -1158,7 +1010,7 @@ private:
 			VK_FORMAT_R8G8B8A8_SRGB,
 			VK_IMAGE_ASPECT_COLOR_BIT);
 
-		std::cout << "Successfully created texture at index " << textureIndex << std::endl;
+		//std::cout << "Successfully created texture at index " << textureIndex << std::endl;
 	}
 
 	void copyBufferToImage(VkBuffer buffer, VkImage image, uint32_t width, uint32_t height) {
@@ -1316,11 +1168,6 @@ private:
 		allocInfo.commandPool = commandPool;
 		allocInfo.commandBufferCount = 1;
 
-		// Only print debug info if there are issues or if we have very few active buffers
-		if (currentActive == 0) {
-			std::cout << "Allocating first single-time command buffer from pool" << std::endl;
-		}
-
 		VkCommandBuffer commandBuffer = VK_NULL_HANDLE;
 		VkResult res = vkAllocateCommandBuffers(device, &allocInfo, &commandBuffer);
 		if (res != VK_SUCCESS) {
@@ -1383,11 +1230,6 @@ private:
 		if (res != VK_SUCCESS) {
 			std::cerr << "vkQueueWaitIdle failed in endSingleTimeCommands, VkResult: " << res << std::endl;
 			throw std::runtime_error("Failed to wait for queue idle in endSingleTimeCommands");
-		}
-
-		// Only print debug info when freeing the last buffer
-		if (currentActive == 1) {
-			std::cout << "Freed last single-time command buffer" << std::endl;
 		}
 		
 		vkFreeCommandBuffers(device, commandPool, 1, &commandBuffer);
@@ -1480,7 +1322,7 @@ private:
 	}
 
 	void createTextureDescriptorSets() {
-		std::cout << "Creating descriptor sets for " << textureImages.size() << " textures..." << std::endl;
+		//std::cout << "Creating descriptor sets for " << textureImages.size() << " textures..." << std::endl;
 		
 		// Create one descriptor set per texture
 		textureDescriptorSets.resize(textureImages.size());
@@ -1501,7 +1343,7 @@ private:
 			throw std::runtime_error("Failed to allocate texture descriptor sets!");
 		}
 
-		std::cout << "Successfully allocated " << textureImages.size() << " texture descriptor sets" << std::endl;
+		//std::cout << "Successfully allocated " << textureImages.size() << " texture descriptor sets" << std::endl;
 
 		// Configure each descriptor set - ONLY texture sampler, no UBO
 		for (size_t i = 0; i < textureImages.size(); i++) {
@@ -1522,7 +1364,7 @@ private:
 			vkUpdateDescriptorSets(device, 1, &descriptorWrite, 0, nullptr);
 		}
 		
-		std::cout << "Successfully configured " << textureImages.size() << " texture descriptor sets" << std::endl;
+		//std::cout << "Successfully configured " << textureImages.size() << " texture descriptor sets" << std::endl;
 	}
 
 	void createDescriptorPool() {
@@ -1760,20 +1602,18 @@ private:
 		allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
 		allocInfo.commandBufferCount = static_cast<uint32_t>(commandBuffers.size());
 
-		std::cout << "Creating command buffers with pool handle: 0x" << std::hex << reinterpret_cast<uint64_t>(commandPool) << std::dec << std::endl;
+		//std::cout << "Creating command buffers with pool handle: 0x" << std::hex << reinterpret_cast<uint64_t>(commandPool) << std::dec << std::endl;
 
 		if (vkAllocateCommandBuffers(device, &allocInfo, commandBuffers.data()) != VK_SUCCESS) {
 			throw std::runtime_error("Failed to allocate command buffers!");
 		}
 
 		// Debug: print allocated handles
-		std::cout << "Allocated command buffers:";
-		for (size_t i = 0; i < commandBuffers.size(); ++i) {
-			std::cout << " [" << i << "]=0x" << std::hex << reinterpret_cast<uint64_t>(commandBuffers[i]) << std::dec;
-		}
-		std::cout << std::endl;
-
-		std::cout << "Successfully created " << commandBuffers.size() << " command buffers" << std::endl;
+		//std::cout << "Allocated command buffers:";
+		//for (size_t i = 0; i < commandBuffers.size(); ++i) {
+		//	std::cout << " [" << i << "]=0x" << std::hex << reinterpret_cast<uint64_t>(commandBuffers[i]) << std::dec;
+		//}
+		//std::cout << std::endl;
 	}
 
 	void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex) {
@@ -1885,7 +1725,7 @@ private:
 			throw std::runtime_error("failed to create command pool!");
 		}
 
-		std::cout << "Command pool created successfully with handle: 0x" << std::hex << reinterpret_cast<uint64_t>(commandPool) << std::dec << std::endl;
+		//std::cout << "Command pool created successfully with handle: 0x" << std::hex << reinterpret_cast<uint64_t>(commandPool) << std::dec << std::endl;
 	}
 
 	void createFramebuffers() {
@@ -2774,9 +2614,25 @@ private:
 		float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
 
 		UniformBufferObject ubo{};
-		ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
-		ubo.view = glm::lookAt(glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		float x_displacement = glm::sin(time) + glm::cos(time);
+		float y_displacement = glm::sin(time);
+		
+		// Move the model away from the camera by translating it
+		// You can adjust these values to position the model where you want:
+		glm::mat4 xwing_scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.125f, 0.125f, 0.125f));
+
+		glm::mat4 xwing_rotate_x = glm::rotate(glm::mat4(1.0f), glm::radians(45.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+
+		glm::mat4 xwing_rotate_y = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+		glm::mat4 xwing_rotate_z = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+
+		glm::mat4 xwing_translate = glm::translate(glm::mat4(1.0f), glm::vec3(7.0f + x_displacement, 5.0f - y_displacement / 2.0, -8.0f));
+
+		ubo.model = xwing_scale * xwing_rotate_x * xwing_translate;
+
+		ubo.view = glm::lookAt(glm::vec3(0.0f, -2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
 		ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float)swapChainExtent.height, 0.1f, 10.0f);
 		ubo.proj[1][1] *= -1; //inversion due to OpenGL
@@ -2839,6 +2695,7 @@ private:
 		glfwTerminate();
 	}
 
+	// Sanity tools for finding texture paths - THIS IS VERY IMPORTANT
 	std::string normalizePath(const std::string& path) {
 		std::string normalized = path;
 		// Convert backslashes to forward slashes for consistency
@@ -2896,40 +2753,6 @@ private:
 		
 		// If all else fails, return the original normalized path
 		return normalized;
-	}
-
-	void debugFileStructure() {
-		std::cout << "\n=== FILE STRUCTURE DEBUG ===" << std::endl;
-		
-		// Check if model file exists
-		std::cout << "Model file check:" << std::endl;
-		std::cout << "  " << MODEL_PATH << " exists: " << (fileExists(MODEL_PATH) ? "YES" : "NO") << std::endl;
-		
-		// Check texture directories
-		std::cout << "\nTexture directory checks:" << std::endl;
-		std::cout << "  textures/ directory accessible: " << (fileExists("textures/") ? "YES" : "NO") << std::endl;
-		std::cout << "  Textures/ directory accessible: " << (fileExists("Textures/") ? "YES" : "NO") << std::endl;
-		
-		// Check specific texture files mentioned in TEXTURE_PATHS
-		std::cout << "\nDirect texture file checks:" << std::endl;
-		for (const auto& texPath : TEXTURE_PATHS) {
-			std::cout << "  " << texPath << " exists: " << (fileExists(texPath) ? "YES" : "NO") << std::endl;
-		}
-		
-		// Check texture files from MTL file
-		std::vector<std::string> mtlTextures = {
-			"Textures/Engines_WingsColor.tga",
-			"textures/Engines_WingsColor.tga", 
-			"Textures/Fuselage_CockpitColor.tga",
-			"textures/Fuselage_CockpitColor.tga"
-		};
-		
-		std::cout << "\nMTL texture file checks:" << std::endl;
-		for (const auto& texPath : mtlTextures) {
-			std::cout << "  " << texPath << " exists: " << (fileExists(texPath) ? "YES" : "NO") << std::endl;
-		}
-		
-		std::cout << "========================\n" << std::endl;
 	}
 };
 
